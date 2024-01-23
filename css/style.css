@@ -4,11 +4,15 @@
 COLORS
 ================================================ */
 :root {
---main-color: ;
---text-color: #333;
+--main-color: #E2DBD5; /* Beige */
+--base-color: #FFF9F2; /* OfWhite */
+--accent-color: #23817A; /* Green */
+--sub-color: #F4E0CB; /* Pale Beige */
+--text-color: #B28049; /* Brown */
+
 --link-color: #0069ff;
 --white: #fff;
-
+--dark-gray: #333;
 }
 /* ================================================
 GENERAL STYLING
