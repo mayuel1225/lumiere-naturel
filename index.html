@@ -2,9 +2,10 @@
 <html lang="ja">
 <head prefix="og: https://ogp.me/ns#">
   <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Lumiere Naturel - ルミエールナチュレル</title>
-  <meta name="description" content="">
+  <meta name="description" content="花や緑で囲まれた美しいガーデンウエディングで叶う、アットホームな結婚式を。美しい風景や季節の移ろいとともに特別な思い出として生涯残る最高の一日を演出します。おふたりとゲストが心地よく過ごせる結婚式を私たちと一緒に創りませんか？">
   
   <!-- OGP（Open Graph Protocol）の設定 -->
   <meta property="og:type" content="website">
@@ -37,6 +38,17 @@
   <script src="js/script.js" type="module"></script>
 </head>
 <body>
+  <!-- ============ メインビジュアル ============ -->
+  <div class="main-visual">
+    <h1 class="main-visual__title">Garden Wedding</h1>
+    <div class="main-visual__sub-title-area">
+      <p class="main-visual__sub-title">自然の中で自分達らしい結婚式</p>
+      <p class="main-visual__catch-copy">ー光と緑のガーデンウエディングー</p>
+    </div>
+    <!-- /.main-visual__sub-title-area -->
+  </div>
+  <!-- /.main-visual -->
+
   <!-- ============ ヘッダー ============ -->
   <header class="header">
     <div class="header__inner">
@@ -82,17 +94,6 @@
   </header>
 
   <main>
-    <!-- ============ メインビジュアル ============ -->
-    <div class="main-visual">
-      <h1 class="main-visual__title">Garden Wedding</h1>
-      <div class="main-visual__sub-title-area">
-        <p class="main-visual__sub-title">自然の中で自分達らしい結婚式</p>
-        <p class="main-visual__catch-copy">ー光と緑のガーデンウエディングー</p>
-      </div>
-      <!-- /.main-visual__sub-title-area -->
-    </div>
-    <!-- /.main-visual -->
-    
     <!-- ============ コンセプト ============ -->
     <section id="concept" class="concept">
       <div class="concept__wrapper">
@@ -393,7 +394,7 @@
     <svg width="1440" height="120" viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M361.613 0C169.464 1.45266e-05 0.775391 9.92863 0.775391 9.92863V120H1439.78V60.6748C1439.78 60.6748 1262.03 95.9765 1082.17 95.9765C902.311 95.9765 776.07 60.6577 720.217 46.8694C664.363 33.0812 553.762 -1.45266e-05 361.613 0Z" fill="#F4E0CB"/>
     </svg>
-    
+
     <section id="access" class="access bg-color-sub">
       <div class="access__inner contents-layout bg-color-white">
         <h2 class="level2-heading">アクセス</h2>
@@ -445,7 +446,7 @@
               </select>
             </div>
             <!-- /.contact__form-item -->
-            
+
             <!-- お名前 -->
             <div class="contact__form-item">
               <div class="contact__label-area">
@@ -548,13 +549,100 @@
               </select>
             </div>
             <!-- /.contact__form-item -->
-            
+
+            <!-- ご質問・お問い合わせ内容 -->
+            <div class="contact__form-item">
+              <div class="contact__label-area">
+                <label for="question" class="contact__label">ご質問・お問い合わせ内容</label>
+                <span class="contact__tag">必須</span>
+              </div>
+              <!-- /.contact__label-area -->
+              <textarea name="question" id="question" class="contact__form-textarea" required></textarea>
+            </div>
+            <!-- /.contact__form-item -->
+
+            <!-- ご相談方法 -->
+            <div class="contact__form-item">
+              <div class="contact__label-area">
+                <label for="question" class="contact__label">ご相談方法</label>
+                <span class="contact__tag">必須</span>
+              </div>
+              <!-- /.contact__label-area -->
+              <span class="contact__form-redio">
+                <input type="radio" name="type" id="online" value="online" checked>
+                <label for="online">オンライン</label>
+              </span>
+              <span class="contact__form-redio">
+                <input type="radio" name="type" id="visit" value="visit">
+                <label for="visit">ご来店</label>
+              </span>
+            </div>
+            <!-- /.contact__form-item -->
+
+            <!-- 送信ボタン -->
+            <div class="contact__form-btn">
+              <button type="submit" class="btn">送信する</button>
+            </div>
+            <!-- /.contact__form-btn -->
           </form>
         </div>
         <!-- /.contact__form-area -->
+
+        <div id="tel" class="contact__tel-area">
+          <div class="contact__tel-text-area">
+            <p class="contact__tel-title">お電話でのお問い合わせはこちらから</p>
+            <p class="contact__tel-text">受付 11：00 〜 20：00（年末年始を除く全日）</p>
+          </div>
+          <!-- /.contact__tel-text -->
+          <img src="images/telephone-number.png" alt="電話番号" class="contact__tel-number">
+        </div>
+        <!-- /#tel.contact__tel-area -->
       </div>
       <!-- /.contact__inner contents-layout -->
     </section>
   </main>
+
+  <!-- ============ フッター ============ -->
+  <footer class="footer">
+    <div class="footer__body bg-color-main">
+      <div class="footer__inner">
+        <div class="footer__logo-area">
+          <img src="images/logo.png" alt="" class="footer__logo">
+          <div class="footer__number-area">
+            <img src="images/telephone-number.png" alt="電話番号" class="footer__number">
+            <p class="footer__text">受付 11：00 〜 20：00（年末年始を除く全日）</p>
+          </div>
+          <!-- /.footer__number-area -->
+        </div>
+        <!-- /.footer__logo-area -->
+        <nav class="footer__nav">
+          <ul class="footer__nav-list">
+            <li class="footer__nav-item">
+              <a href="#concept" class="footer__nav-link">コンセプト</a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="#commitment" class="footer__nav-link">こだわり</a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="#flow" class="footer__nav-link">結婚式までの流れ</a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="#voice" class="footer__nav-link">お客様の声</a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="#access" class="footer__nav-link">アクセス</a>
+            </li>
+          </ul>
+        </nav>
+        <a href="#contact" class="btn btn--before-icon book-icon">資料請求する</a>
+      </div>
+      <!-- /.footer__inner -->
+    </div>
+    <!-- /.footer__body bg-color-main -->
+    <div class="footer__copyright-area bg-color-white">
+      <small class="footer__copyright">&copy; Lumiere Naturel</small>
+    </div>
+    <!-- /.footer__copyright-area -->
+  </footer>
 </body>
 </html>
