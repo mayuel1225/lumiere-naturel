@@ -4,11 +4,11 @@
 COLORS
 ================================================ */
 :root {
---main-color: #E2DBD5; /* Beige */
+--main-color: #DBBB99; /* Beige */
 --base-color: #FFF9F2; /* OfWhite */
 --accent-color: #23817A; /* Green */
 --sub-color: #F4E0CB; /* Pale Beige */
---text-color: #B28049; /* Brown */
+--text-color: #6B3A03; /* Brown */
 
 --link-color: #0069ff;
 --white: #fff;
@@ -51,9 +51,20 @@ p {
 /* ================================================
 HELPER MODULE
 ================================================ */
-/*	
+/*	背景色
 ------------------------------------------------ */
-
+.bg-color-main {
+  background-color: var(--main-color);
+}
+.bg-color-base {
+  background-color: var(--base-color);
+}
+.bg-color-sub {
+  background-color: var(--sub-color);
+}
+.bg-color-white {
+  background-color: var(--white);
+}
 
 /* デスクトップ表示
 ------------------------------------------------ */
