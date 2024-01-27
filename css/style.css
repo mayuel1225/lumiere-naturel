@@ -9,11 +9,11 @@ COLORS
 --accent-color: #23817A; /* Green */
 --sub-color: #F4E0CB; /* Pale Beige */
 --text-color: #6B3A03; /* Brown */
-
 --link-color: #0069ff;
 --white: #fff;
 --dark-gray: #333;
 }
+
 /* ================================================
 GENERAL STYLING
 ================================================ */
@@ -25,13 +25,12 @@ html {
 body {
   background-color: var(--base-color);
   color: var(--text-color);
-  font-family: "Helvetica Neue",
-    Arial,
-    "Hiragino Kaku Gothic ProN",
-    "Hiragino Sans",
-    "Meiryo",
-    sans-serif;
+  font-family: "hiragino-kaku-gothic-pron", sans-serif;
+  font-weight: 300;
+  font-style: normal;
   font-feature-settings: "palt";
+  line-height: 1.5;
+  overflow-x: hidden;
 }
 
 /* ================================================
@@ -44,8 +43,94 @@ img {
   max-width: 100%;
 }
 p {
-  line-height: 1.5;
+  line-height: 2;
   text-align: justify;
+}
+
+/* コンテンツの共通レイアウト
+------------------------------------------------ */
+.contents-layout {
+  padding-right: 1.25rem;
+  padding-left: 1.25rem;
+}
+/* 1025px以上 PC用 */
+@media screen and (min-width: 1025px) {
+  .contents-layout {
+    max-width: 1440px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 10.6rem;
+    padding-left: 10.6rem;
+  }
+}
+
+/* ボタン
+------------------------------------------------ */
+.btn {
+  display: inline-block;
+  max-width: 100%;
+  padding-top: .62rem;
+  padding-right: 3rem;
+  padding-bottom: .62rem;
+  padding-left: 3rem;
+  background-color: var(--accent-color);
+  border: 2px solid transparent;
+  border-radius: 3.125rem;
+  box-shadow: 0px 5px 3px 0px rgba(0, 0, 0, 0.20);
+  color: var(--white);
+  font-size: 1rem;
+  transition: .8s;
+}
+.btn:focus,
+.btn:hover {
+  background-color: var(--white);
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+.btn--before-icon {
+  position: relative;
+  padding-right: 1.38em;
+  padding-left: 3em;
+}
+.btn--before-icon::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: .812em;
+  font-family:"Material Symbols Outlined";
+  font-size: 1.875rem;
+  transform: translateY(-50%);
+}
+.btn--before-icon.book-icon::before {
+  content: "\ea19";
+}
+.btn--before-icon.tel-icon::before {
+  content: "\e0b0";
+}
+.btn--before-icon.mail-icon::before {
+  content: "\e158";
+}
+/* ボタン デスクトップ表示 */
+@media screen and (min-width: 768px) {
+  .btn {
+    font-size: 1.125rem;
+  }
+}
+
+/* h2見出し
+------------------------------------------------ */
+.level2-heading {
+  font-family: "Hiragino Mincho ProN";
+  font-size: 1.25rem;
+  letter-spacing: 0.125rem;
+  text-align: center;
+}
+/* h2見出し デスクトップ表示 */
+@media screen and (min-width: 768px) {
+  .level2-heading {
+    font-size: 2.5rem;
+    letter-spacing: 0.25rem;
+  }
 }
 
 /* ================================================
@@ -68,8 +153,10 @@ HELPER MODULE
 
 /* デスクトップ表示
 ------------------------------------------------ */
-@media screen and (min-width: 600px) {
-
+@media screen and (min-width: 768px) {
+  .sp-br {
+    display: none;
+  }
 }
 
 /* ================================================
@@ -81,30 +168,224 @@ ELEMENT MODULE
 
 /* デスクトップ表示
 ------------------------------------------------ */
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 768px) {
 
 }
 
 /* ================================================
 ヘッダー
 ================================================ */
+.header__inner {
+  padding-right: 1.25rem;
+  padding-left: 1.25rem;
+}
 
+/* SPのみの設定
+------------------------------------------------ */
+@media screen and (max-width: 767px) {
+  .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 90px;
+    padding-top: 1.88rem;
+    padding-bottom: 1.88rem;
+    z-index: 99;
+  }
+  .header__logo {
+    width: 7.6875rem;
+    height: 1.66969rem;
+  }
+  .header__btn-line {
+    display: inline-block;
+    position: absolute;
+    top: 2.08rem;
+    right: 1.25rem;
+    z-index: 4;
+    display: block;
+    width: 30px;
+    height: 2.5px;
+    background-color: var(--white);
+  }
+  .header__btn-line::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: -10px;
+    width: 30px;
+    height: 2.5px;
+    background-color: var(--white);
+    transition: .3s;
+  }
+  .header__btn-line::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    width: 30px;
+    height: 2.5px;
+    background-color: var(--white);
+    transition: .3s;
+  }
+  .header__btn.is_active .header__btn-line {
+    background-color: transparent;
+  }
+  .header__btn.is_active .header__btn-line::before {
+    transform: rotate(35deg);
+    transform-origin: left top;
+  }
+  .header__btn.is_active .header__btn-line::after {
+    top: 7px;
+    left: -1.5px;
+    transform: rotate(-35deg);
+    transform-origin: left top;
+  }
+  .header__nav-panel  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    padding-top: 3.12rem;
+    padding-right: 5.62rem;
+    padding-bottom: 3.12rem;
+    padding-left: 4.94rem;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--main-color);
+    translate: 100vw;
+    transition: .8s;
+  }
+  .header__nav-panel.is_active {
+    translate: 0;
+  }
+  .header__nav-item {
+    margin-bottom: 2.5rem;
+  }
+  .header__nav-link {
+    color: var(--white);
+  }
+}
 
 /* ヘッダーのデスクトップ表示
 ------------------------------------------------ */
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 768px) {
+  .header {
+    position: sticky;
+    top: 0;
+    height: 12vh;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    background-color: var(--main-color);
+  }
+  .header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.875rem;
+    height: 100%;
+  }
+  .header__logo {
+    width: 13.8125rem;
+    height: 3rem;
+  }
+  .header__nav-list {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    height: 100%;
+  }
+  .header__nav-link {
+    color: var(--white);
+    font-size: 1.125rem;
+    transition: .8s;
+  }
+  .header__nav-link:focus,
+  .header__nav-link:hover {
+  color: var(--text-color);
+  }
+}
+
+/* ================================================
+メインビジュアル
+================================================ */
+.main-visual {
+  padding-top: 90px;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../images/main-visual_sp.jpg);
+  background-size: cover;
+}
+.main-visual__title {
+  padding-top: 30vh;
+  color: var(--white);
+  font-family: "adobe-garamond-pro", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 4rem;
+  line-height: 1;
+  text-align: center;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.main-visual__sub-title-area {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 9.375rem;
+  background-color: var(--white);
+  opacity: .8;
+}
+.main-visual__sub-title {
+  margin-bottom: .5rem;
+  font-family: "hiragino-mincho-pron", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.125rem;
+  letter-spacing: 0.1125rem;
+  line-height: 150%; /* 1.125rem */
+  text-align: center;
+}
+.main-visual__catch-copy {
+  text-align: center;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 150%; /* 1.125rem */
+  letter-spacing: 0.15rem;
+}
+
+/* デスクトップ表示
+------------------------------------------------ */
+@media screen and (min-width: 768px) {
+  .main-visual {
+    height: 88vh;
+    background-image: url(../images/main-visual_pc.jpg);
+  }
+  .main-visual__title {
+    padding-top: 35vh;
+    font-size: 6.875rem;
+  }
+  .main-visual__sub-title {
+    font-size: 2rem;
+    letter-spacing: 0.3rem;
+  }
+  .main-visual__catch-copy {
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+  }
+
 
 }
+
 
 /* ================================================
 CONTENTS
 ================================================ */
-/*	
+/* 
 ------------------------------------------------ */
 
 /* デスクトップ表示
 ------------------------------------------------ */
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 768px) {
 
 }
 
@@ -115,6 +396,6 @@ CONTENTS
 
 /* フッターのデスクトップ表示
 ------------------------------------------------ */
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 768px) {
 
 }
