@@ -690,6 +690,312 @@ CTA
 }
 
 /* ================================================
+お客様の声
+================================================ */
+.voice {
+  position: relative;
+  padding-top: 3.12rem;
+  /* 右にスクロールできることを示すため余白はなし */
+  padding-bottom: 3.19rem;
+  padding-left: 1.25rem;
+  text-align: center;
+}
+.voice__container {
+  display: flex;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+.voice__item {
+  width: 296px;
+  margin-bottom: 3.08rem;
+  margin-right: 2.5rem;
+}
+.voice__item:last-child {
+  margin-right: 1.25rem;
+}
+.voice__image-wrapper {
+  margin-bottom: .75rem;
+}
+.voice__image {
+  margin-bottom: .5rem;
+}
+.voice__name {
+  font-size: 0.75rem;
+  text-align: left;
+}
+.voice__title {
+  margin-bottom: .75rem;
+  font-size: 1.125rem;
+  line-height: 1.2;
+  text-align: left;
+}
+.voice__quotation {
+  color: var(--main-color);
+  font-family: "maru-maru-gothic-alr-stdn", sans-serif;
+  font-size: 1.5rem;
+}
+.voice__text {
+  font-size: 0.75rem;
+  white-space: wrap;
+}
+.voice__btn {
+  width: 50vw;
+  max-width: 20.9375rem;
+}
+@media screen and (max-width: 767px) {
+  /* スクロールアイコン */
+  .voice__scroll {
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: 50%;
+    right: 1.25rem;
+    width: 3.875rem;
+    height: 3.74994rem;
+    background-color: var(--main-color);
+    border: 2.5px solid var(--main-color);
+    color: var(--white);
+    font-size: 0.75rem;
+    font-weight: bold;
+    opacity: 0.6;
+  }
+  .voice__scroll-icon {
+    display: block;
+    margin-bottom: -1rem;
+  }
+}
+/* お客様の声のデスクトップ表示
+------------------------------------------------ */
+@media screen and (min-width: 768px) {
+  .voice {
+    max-width: 1100px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 7.5rem;
+    padding-bottom: 7.5rem;
+  }
+  .voice__container {
+    flex-direction: column;
+    overflow: visible;
+    white-space: wrap;
+  }
+  .voice__item {
+    display: flex;
+    gap: 10%;
+    width: 100%;
+    margin-bottom: 9.37rem;
+    margin-right: 0;
+  }
+  .voice__item--row-reverse {
+    flex-direction: row-reverse;
+  }
+  .voice__image-wrapper {
+    flex: 1 0 49%;
+    margin-bottom: 0;
+  }
+  .voice__image {
+    margin-bottom: .75rem;
+  }
+  .voice__name {
+    font-size: 1rem;
+  }
+  .voice__text-area {
+    flex: 0 0 40%;
+  }
+  .voice__title {
+    margin-bottom: 2.5rem;
+    font-size: 2rem;
+    line-height: 1.5;
+  }
+  .voice__quotation {
+    font-size: 2rem;
+  }
+  .voice__text {
+    font-size: 1rem;
+  }
+}
+
+/* ================================================
+アクセス
+================================================ */
+.access {
+  padding-top: 3.13rem;
+  padding-right: 1.19rem;
+  padding-bottom: 1.87rem;
+  padding-left: 1.25rem;
+  text-align: center;
+}
+.access__inner {
+  padding-top: 3.13rem;
+  padding-bottom: 3.13rem;
+  border-radius: 1.5625rem;
+}
+.access__map-wrapper {
+  margin-bottom: 1.25rem;
+}
+.access__map {
+  width: 100%;
+  height: 14.375rem;
+}
+.access__body {
+  text-align: left;
+}
+.access__logo {
+  margin-bottom: 1.25rem;
+  width: 8.5625rem;
+}
+.access__text {
+  margin-bottom: 1.25rem;
+  font-size: 0.75rem;
+  line-height: 1.6;
+}
+.access__btn {
+  width: 100%;
+  text-align: center;
+}
+/* アクセスのデスクトップ表示
+------------------------------------------------ */
+@media screen and (min-width: 768px) {
+  .access {
+    padding-top: 7.5rem;
+    padding-right: 10.63rem;
+    padding-bottom: 7.5rem;
+    padding-left: 10.63rem;
+  }
+  .access__inner {
+    padding-top: 3.81rem;
+    padding-bottom: 7.5rem;
+    border-radius: 3.125rem;
+  }
+  .access__container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 816px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .access__map-wrapper {
+    margin-bottom: 0;
+  }
+  .access__map {
+    width: 40vh;
+    height: 40vh;
+  }
+  .access__body {
+    flex: 0 0 43.2598%;
+  }
+  .access__logo {
+    margin-bottom: 1.69rem;
+    width: 13.8125rem;
+  }
+  .access__text {
+    margin-bottom: 1.69rem;
+    font-size: 0.875rem;
+    line-height: 1.6;
+  }
+}
+
+/* ================================================
+資料請求・お問い合わせ
+================================================ */
+.contact {
+  padding-top: 3.13rem;
+  padding-bottom: 5rem;
+  transform: translateY(-1px);
+}
+.contact__text {
+  margin-bottom: 1.91rem;
+  font-size: 0.75rem;
+}
+.contact__form-item {
+  margin-bottom: 1.25rem;
+}
+.contact__label {
+  display: inline-block;
+  margin-right: .62rem;
+  margin-bottom: .62rem;
+}
+/* 必須タグ */
+.contact__tag {
+  display: inline-block;
+  padding: 0.125rem 0.375rem;
+  background-color: var(--accent-color);
+  color: var(--white);
+  font-size: 0.75rem;
+}
+/* 選択式フォーム */
+.contact__form-select {
+  width: 13.5625rem;
+  height: 2.75rem;
+  padding-right: 1.25rem;
+  padding-left: .937rem;
+  background-color: var(--base-color);
+  background-image: url(../images/Polygon.png);
+  background-position: right .94rem center;
+  background-repeat: no-repeat;
+  background-size: 15px 13px;
+}
+/* テキスト入力フォーム */
+.contact__form-text {
+  width: 100%;
+  height: 2.75rem;
+  padding: .72rem .937rem;
+  background-color: var(--base-color);
+}
+.contact__form-text::placeholder {
+  color: var(--text-color);
+  opacity: 0.6;
+}
+/* ご相談希望日の下余白 */
+.contact__date-titel {
+  margin-bottom: 1.31rem;
+}
+/* 希望日選択フォーム */
+.contact__form-date {
+  width: 13.5625rem;
+  height: 2.75rem;
+  padding: .72rem .937rem;
+  background-color: var(--base-color);
+}
+/* 文章入力フォーム */
+.contact__form-textarea {
+  width: 100%;
+  height: 9.375rem;
+  background-color: var(--base-color);
+  resize: none;
+}
+/* ボタン */
+.contact__form-btn {
+  width: 100%;
+  text-align: center;
+}
+.contact__form-btn-wrapper {
+  margin-top: 1.875rem;
+  margin-bottom: 3.13rem;
+}
+/* 電話番号のエリア */
+.contact__tel-area {
+  width: 100%;
+  padding-top: 2.18rem;
+  padding-right: 2.34rem;
+  padding-bottom: 2.18rem;
+  padding-left: 2.53rem;
+  background-color: var(--base-color);
+}
+.contact__tel-title {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.contact__tel-text {
+  margin-bottom: .62rem;
+  font-size: 0.6875rem;
+}
+/* 資料請求・お問い合わせのデスクトップ表示
+------------------------------------------------ */
+@media screen and (min-width: 768px) {
+
+}
+/* ================================================
 フッター
 ================================================ */
 

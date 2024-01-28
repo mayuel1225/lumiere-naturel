@@ -392,7 +392,7 @@
     </svg>
 
     <!-- ============ お客様の声 ============ -->
-    <section id="voice" class="voice contents-layout">
+    <section id="voice" class="voice">
       <h2 class="level2-heading">お客様の声</h2>
       <div class="voice__container">
         <div class="voice__item">
@@ -413,7 +413,7 @@
           <!-- /.voice__text-area -->
         </div>
         <!-- /.voice__item -->
-        <div class="voice__item">
+        <div class="voice__item voice__item--row-reverse">
           <figure class="voice__image-wrapper">
             <img src="images/voice2.jpg" alt="鈴原さんご夫婦の写真" class="voice__image">
             <figcaption class="voice__name">鈴原さんご夫婦</figcaption>
@@ -451,7 +451,11 @@
         <!-- /.voice__item -->
       </div>
       <!-- /.voice__container -->
-      <a href="#contact" class="btn btn--before-icon book-icon">資料請求する</a>
+      <div class="voice__scroll sp-only">
+        <span class="voice__scroll-icon material-symbols-outlined">arrow_right_alt</span>Scroll
+      </div>
+      <!-- /.voice__scroll -->
+      <a href="#contact" class="voice__btn btn btn--before-icon book-icon">資料請求する</a>
     </section>
 
     <!-- ============ アクセス ============ -->
@@ -464,16 +468,16 @@
       <div class="access__inner contents-layout bg-color-white">
         <h2 class="level2-heading">アクセス</h2>
         <div class="access__container">
-          <div class="access__map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.8280306898537!2d139.7645498764484!3d35.68123617258723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bfbd89f700b%3A0x277c49ba34ed38!2z5p2x5Lqs6aeF!5e0!3m2!1sja!2sjp!4v1706222853330!5m2!1sja!2sjp" width="auto" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <div class="access__map-wrapper">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.8280306898537!2d139.7645498764484!3d35.68123617258723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bfbd89f700b%3A0x277c49ba34ed38!2z5p2x5Lqs6aeF!5e0!3m2!1sja!2sjp!4v1706222853330!5m2!1sja!2sjp" width="auto" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="access__map"></iframe>
           </div>
-          <!-- /.access__map -->
+          <!-- /.access__map-wrapper -->
           <div class="access__body">
-            <img src="images/logo.png" alt="Lumiere Naturelのロゴ" class="access__logo">
+            <img src="images/access_logo.png" alt="Lumiere Naturelのロゴ" class="access__logo">
             <p class="access__text">
               〒000-0000<br>東京都○○○区○○市○○○○1-2-3<br>TEL.000-0000-0000<br><br>電車の場合<br>○○○○線「○○○○」駅 2番出口より徒歩 10 分<br>お車の場合<br>○○○○高速「○○○○」出口より 15 分 <br>※専用駐車場をご利用いただけます。
             </p>
-            <a href="https://maps.app.goo.gl/KWjr4KurSaRUVpC79" class="btn">Googlemap</a>
+            <a href="https://maps.app.goo.gl/KWjr4KurSaRUVpC79" class="access__btn btn">Googlemap</a>
           </div>
           <!-- /.access__body -->
         </div>
@@ -483,12 +487,12 @@
     </section>
 
     <!-- ペールベージュ色の波形の背景（下部のパーツ） -->
-    <svg class="wave-bottom" width="100%" viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg class="wave-bottom bg-color-white" width="100%" viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M361.613 22.2947C169.464 22.2947 0.775391 32.4022 0.775391 32.4022V0H1439.78V84.0624C1439.78 84.0624 1262.03 120 1082.17 120C902.311 120 776.07 84.045 720.217 70.0084C664.363 55.9718 553.762 22.2947 361.613 22.2947Z" fill="#F4E0CB"/>
     </svg>
 
     <!-- ============ 資料請求・お問い合わせ ============ -->
-    <section id="contact" class="contact">
+    <section id="contact" class="contact bg-color-white">
       <div class="contact__inner contents-layout">
         <div class="contact__title-area">
           <h2 class="level2-heading">資料請求・お問い合わせ</h2>
@@ -645,10 +649,10 @@
             <!-- /.contact__form-item -->
 
             <!-- 送信ボタン -->
-            <div class="contact__form-btn">
-              <button type="submit" class="btn">送信する</button>
+            <div class="contact__form-btn-wrapper">
+              <button type="submit" class="contact__form-btn btn">送信する</button>
             </div>
-            <!-- /.contact__form-btn -->
+            <!-- /.contact__form-btn-wrapper -->
           </form>
         </div>
         <!-- /.contact__form-area -->
