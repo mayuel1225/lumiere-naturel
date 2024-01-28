@@ -37,7 +37,7 @@
 <body>
   <!-- ============ メインビジュアル ============ -->
   <div class="main-visual">
-    <h1 class="main-visual__title">Garden <br class="sp-br">Wedding</h1>
+    <h1 class="main-visual__title">Garden <br class="sp-only">Wedding</h1>
     <div class="main-visual__sub-title-area">
       <div class="main-visual__sub-title-wrapper">
         <p class="main-visual__sub-title">自然の中で自分達らしい結婚式</p>
@@ -125,6 +125,12 @@
           <img src="images/concept-gallery3.jpg" alt="" class="gallery__image">
           <img src="images/concept-gallery4.jpg" alt="" class="gallery__image">
           <img src="images/concept-gallery5.jpg" alt="" class="gallery__image">
+          <!-- 画像を繰り返し配置 -->
+          <img src="images/concept-gallery1.jpg" alt="" class="gallery__image">
+          <img src="images/concept-gallery2.jpg" alt="" class="gallery__image">
+          <img src="images/concept-gallery3.jpg" alt="" class="gallery__image">
+          <img src="images/concept-gallery4.jpg" alt="" class="gallery__image">
+          <img src="images/concept-gallery5.jpg" alt="" class="gallery__image">
         </div>
         <!-- /.gallery__slider -->
       </div>
@@ -133,7 +139,7 @@
 
     <!-- ============ こだわり ============ -->
     <!-- ペールベージュ色の波形の背景（上部のパーツ） -->
-    <svg width="1440" height="120" viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg class="wave-top" width="100%" viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M361.613 0C169.464 1.45266e-05 0.775391 9.92863 0.775391 9.92863V120H1439.78V60.6748C1439.78 60.6748 1262.03 95.9765 1082.17 95.9765C902.311 95.9765 776.07 60.6577 720.217 46.8694C664.363 33.0812 553.762 -1.45266e-05 361.613 0Z" fill="#F4E0CB"/>
     </svg>
 
@@ -154,7 +160,7 @@
             <!-- /.commitment__text-area -->
           </div>
           <!-- /.commitment__item -->
-          <div class="commitment__item">
+          <div class="commitment__item commitment__item--row-reverse">
             <figure class="commitment__image-wrapper">
               <img src="images/commitment2.jpg" alt="友人たちとブーケトスをしている写真" class="commitment__image">
             </figure>
@@ -180,7 +186,7 @@
             <!-- /.commitment__text-area -->
           </div>
           <!-- /.commitment__item -->
-          <div class="commitment__item">
+          <div class="commitment__item commitment__item--row-reverse">
             <figure class="commitment__image-wrapper">
               <img src="images/commitment4.jpg" alt="飾り付けられたウェルカムボードの写真" class="commitment__image">
             </figure>
@@ -213,7 +219,7 @@
     </section>
 
     <!-- ペールベージュ色の波形の背景（下部のパーツ） -->
-    <svg width="1440" height="120" viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg class="wave-bottom" width="100%" viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M361.613 22.2947C169.464 22.2947 0.775391 32.4022 0.775391 32.4022V0H1439.78V84.0624C1439.78 84.0624 1262.03 120 1082.17 120C902.311 120 776.07 84.045 720.217 70.0084C664.363 55.9718 553.762 22.2947 361.613 22.2947Z" fill="#F4E0CB"/>
     </svg>
 
@@ -225,101 +231,163 @@
       <p class="cta-area__text">
         こだわりや結婚式の様子を詳しくご紹介しております。<br>ぜひ無料の資料請求で詳細をご確認ください。
       </p>
-      <a href="#contact" class="btn btn--before-icon book-icon">資料請求する</a>
+      <a href="#contact" class="cta-area__btn btn btn--before-icon book-icon">資料請求する</a>
     </div>
     <!-- /.cta-area contents-layout -->
 
     <!-- ============ 結婚式までの流れ ============ -->
     <!-- ベージュ色の波形の背景（上部のパーツ） -->
-    <svg width="1440" height="120" viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg class="wave-top" width="100%" viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M361.613 0C169.464 1.45266e-05 0.775391 9.92863 0.775391 9.92863V120H1439.78V60.6748C1439.78 60.6748 1262.03 95.9765 1082.17 95.9765C902.311 95.9765 776.07 60.6577 720.217 46.8694C664.363 33.0812 553.762 -1.45266e-05 361.613 0Z" fill="#DBBB99"/>
     </svg>
 
     <section id="flow" class="flow bg-color-main">
       <div class="flow__inner contents-layout bg-color-base">
         <h2 class="level2-heading">結婚式までの流れ</h2>
-        <div class="flow__item">
-          <div class="flow__container sp-only">
+
+        <!-- スマートフォン表示のレイアウト -->
+        <div class="flow__item sp-only">
+          <div class="flow__container">
             <figure class="flow__image-wrapper">
               <img src="images/flow1.jpg" alt="ブライダルプランナーがヒアリングしている写真" class="flow__image">
             </figure>
-            <div class="flow__container pc-only">
-              <div class="flow__title-area">
-                <div class="flow__step-wrapper">
-                  <img src="images/step01.svg" alt="STEP01" class="flow__step">
-                </div>
-                <!-- /.flow__step-wrapper -->
-                <h3 class="flow__title">ヒアリング</h3>
+            <div class="flow__title-area">
+              <div class="flow__step-wrapper">
+                <img src="images/step01.svg" alt="STEP01" class="flow__step">
               </div>
-              <!-- /.flow__title-area -->
+              <!-- /.flow__step-wrapper -->
+              <h3 class="flow__title">ヒアリング</h3>
             </div>
-            <!-- /.flow__container pc-only -->
+            <!-- /.flow__title-area -->
           </div>
-          <!-- /.flow__container sp-only -->
+          <!-- /.flow__container -->
           <p class="flow__text">
             まずはざっくりとご希望の雰囲気やデザイン、ご予算をお伺いします。お悩みの場合はプランナーが様々なご提案をいたしますのでご安心ください！
           </p>
         </div>
         <!-- /.flow__item -->
+        <!-- デスクトップ表示のレイアウト -->
+        <div class="flow__item pc-only">
+          <div class="flow__container">
+            <figure class="flow__image-wrapper">
+              <img src="images/flow1.jpg" alt="ブライダルプランナーがヒアリングしている写真" class="flow__image">
+            </figure>
+            <div class="flow__title-area">
+              <div class="flow__step-wrapper">
+                <img src="images/step01.svg" alt="STEP01" class="flow__step">
+              </div>
+              <!-- /.flow__step-wrapper -->
+              <h3 class="flow__title">ヒアリング</h3>
+              <p class="flow__text">
+                まずはざっくりとご希望の雰囲気やデザイン、ご予算をお伺いします。お悩みの場合はプランナーが様々なご提案をいたしますのでご安心ください！
+              </p>
+            </div>
+            <!-- /.flow__title-area -->
+          </div>
+          <!-- /.flow__container -->
+        </div>
+        <!-- /.flow__item .pc-only -->
+
         <div class="flow__arrow-wrapper">
           <img src="images/arrow.svg" alt="下向きの矢印" class="flow__arrow">
         </div>
         <!-- /.flow__arrow-wrapper -->
-        <div class="flow__item">
-          <div class="flow__container sp-only">
+
+        <!-- スマートフォン表示のレイアウト -->
+        <div class="flow__item sp-only">
+          <div class="flow__container">
             <figure class="flow__image-wrapper">
-              <img src="images/flow2.jpg" alt="女性がブライダルプランナーと打ち合わせをしている写真" class="flow__image">
+              <img src="images/flow2.jpg" alt="女性がブライダルプランナーと話している写真" class="flow__image">
             </figure>
-            <div class="flow__container pc-only">
-              <div class="flow__title-area">
-                <div class="flow__step-wrapper">
-                  <img src="images/step02.svg" alt="STEP02" class="flow__step">
-                </div>
-                <!-- /.flow__step-wrapper -->
-                <h3 class="flow__title">プランやデザインの作成・確認</h3>
+            <div class="flow__title-area">
+              <div class="flow__step-wrapper">
+                <img src="images/step02.svg" alt="STEP02" class="flow__step">
               </div>
-              <!-- /.flow__title-area -->
+              <!-- /.flow__step-wrapper -->
+              <h3 class="flow__title">プランやデザインの作成・確認</h3>
             </div>
-            <!-- /.flow__container pc-only -->
+            <!-- /.flow__title-area -->
           </div>
-          <!-- /.flow__container sp-only -->
+          <!-- /.flow__container -->
           <p class="flow__text">
             ヒアリングでお伺いしたご希望をプランナー・デザイナーが随時ご連絡を取りながら具体的な形にします。
           </p>
         </div>
         <!-- /.flow__item -->
+        <!-- デスクトップ表示のレイアウト -->
+        <div class="flow__item pc-only">
+          <div class="flow__container">
+            <figure class="flow__image-wrapper">
+              <img src="images/flow2.jpg" alt="女性がブライダルプランナーと話している写真" class="flow__image">
+            </figure>
+            <div class="flow__title-area">
+              <div class="flow__step-wrapper">
+                <img src="images/step02.svg" alt="STEP02" class="flow__step">
+              </div>
+              <!-- /.flow__step-wrapper -->
+              <h3 class="flow__title">プランやデザインの作成・確認</h3>
+              <p class="flow__text">
+                ヒアリングでお伺いしたご希望をプランナー・デザイナーが随時ご連絡を取りながら具体的な形にします。
+              </p>
+            </div>
+            <!-- /.flow__title-area -->
+          </div>
+          <!-- /.flow__container -->
+        </div>
+        <!-- /.flow__item .pc-only -->
+
         <div class="flow__arrow-wrapper">
           <img src="images/arrow.svg" alt="下向きの矢印" class="flow__arrow">
         </div>
         <!-- /.flow__arrow-wrapper -->
-        <div class="flow__item">
-          <div class="flow__container sp-only">
+
+        <!-- スマートフォン表示のレイアウト -->
+        <div class="flow__item sp-only">
+          <div class="flow__container">
             <figure class="flow__image-wrapper">
               <img src="images/flow3.jpg" alt="ブライダルプランナーが花婿と花嫁を誘導している写真" class="flow__image">
             </figure>
-            <div class="flow__container pc-only">
-              <div class="flow__title-area">
-                <div class="flow__step-wrapper">
-                  <img src="images/step03.svg" alt="STEP03" class="flow__step">
-                </div>
-                <!-- /.flow__step-wrapper -->
-                <h3 class="flow__title">結婚式当日</h3>
+            <div class="flow__title-area">
+              <div class="flow__step-wrapper">
+                <img src="images/step03.svg" alt="STEP03" class="flow__step">
               </div>
-              <!-- /.flow__title-area -->
+              <!-- /.flow__step-wrapper -->
+              <h3 class="flow__title">結婚式当日</h3>
             </div>
-            <!-- /.flow__container pc-only -->
+            <!-- /.flow__title-area -->
           </div>
-          <!-- /.flow__container sp-only -->
+          <!-- /.flow__container -->
           <p class="flow__text">
             当日はおふたりの理想のチャペルで、専門スタッフがおふたりとゲストの皆様をお迎えいたします。
           </p>
         </div>
         <!-- /.flow__item -->
+        <!-- デスクトップ表示のレイアウト -->
+        <div class="flow__item pc-only">
+          <div class="flow__container">
+            <figure class="flow__image-wrapper">
+              <img src="images/flow3.jpg" alt="ブライダルプランナーが花婿と花嫁を誘導している写真" class="flow__image">
+            </figure>
+            <div class="flow__title-area">
+              <div class="flow__step-wrapper">
+                <img src="images/step03.svg" alt="STEP01" class="flow__step">
+              </div>
+              <!-- /.flow__step-wrapper -->
+              <h3 class="flow__title">結婚式当日</h3>
+              <p class="flow__text">
+                当日はおふたりの理想のチャペルで、専門スタッフがおふたりとゲストの皆様をお迎えいたします。
+              </p>
+            </div>
+            <!-- /.flow__title-area -->
+          </div>
+          <!-- /.flow__container -->
+        </div>
+        <!-- /.flow__item .pc-only -->
       <!-- /.flow__inner contents-layout bg-color-base -->
     </section>
 
     <!-- ベージュ色の波形の背景（下部のパーツ） -->
-    <svg width="1440" height="120" viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg class="wave-bottom" width="100%" viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M361.613 22.2947C169.464 22.2947 0.775391 32.4022 0.775391 32.4022V0H1439.78V84.0624C1439.78 84.0624 1262.03 120 1082.17 120C902.311 120 776.07 84.045 720.217 70.0084C664.363 55.9718 553.762 22.2947 361.613 22.2947Z" fill="#DBBB99"/>
     </svg>
 
@@ -388,7 +456,7 @@
 
     <!-- ============ アクセス ============ -->
     <!-- ペールベージュ色の波形の背景（上部のパーツ） -->
-    <svg width="1440" height="120" viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg class="wave-top" width="100%" viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M361.613 0C169.464 1.45266e-05 0.775391 9.92863 0.775391 9.92863V120H1439.78V60.6748C1439.78 60.6748 1262.03 95.9765 1082.17 95.9765C902.311 95.9765 776.07 60.6577 720.217 46.8694C664.363 33.0812 553.762 -1.45266e-05 361.613 0Z" fill="#F4E0CB"/>
     </svg>
 
@@ -397,7 +465,7 @@
         <h2 class="level2-heading">アクセス</h2>
         <div class="access__container">
           <div class="access__map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.8280306898537!2d139.7645498764484!3d35.68123617258723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bfbd89f700b%3A0x277c49ba34ed38!2z5p2x5Lqs6aeF!5e0!3m2!1sja!2sjp!4v1706222853330!5m2!1sja!2sjp" width="auto" height="auto" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.8280306898537!2d139.7645498764484!3d35.68123617258723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bfbd89f700b%3A0x277c49ba34ed38!2z5p2x5Lqs6aeF!5e0!3m2!1sja!2sjp!4v1706222853330!5m2!1sja!2sjp" width="auto" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
           <!-- /.access__map -->
           <div class="access__body">
@@ -415,7 +483,7 @@
     </section>
 
     <!-- ペールベージュ色の波形の背景（下部のパーツ） -->
-    <svg width="1440" height="120" viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg class="wave-bottom" width="100%" viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M361.613 22.2947C169.464 22.2947 0.775391 32.4022 0.775391 32.4022V0H1439.78V84.0624C1439.78 84.0624 1262.03 120 1082.17 120C902.311 120 776.07 84.045 720.217 70.0084C664.363 55.9718 553.762 22.2947 361.613 22.2947Z" fill="#F4E0CB"/>
     </svg>
 
