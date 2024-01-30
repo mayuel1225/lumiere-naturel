@@ -229,9 +229,11 @@ HELPER MODULE
     background-color: var(--white);
     transition: .3s;
   }
+  /* メニューパネルが開いたら三本線の真ん中のラインを消す */
   .header__btn.is_active .header__btn-line {
     background-color: transparent;
   }
+  /* メニューパネルが開いたら✕マークにする */
   .header__btn.is_active .header__btn-line::before {
     transform: rotate(35deg);
     transform-origin: left top;
@@ -247,15 +249,19 @@ HELPER MODULE
     top: 0;
     left: 0;
     z-index: 2;
-    padding-top: 3.12rem;
+    width: 100%;
+    height: 100vh;
+    padding-top: 8.535rem;
     padding-right: 5.62rem;
     padding-bottom: 3.12rem;
     padding-left: 4.94rem;
-    width: 100%;
-    height: 100vh;
     background-color: var(--main-color);
-    translate: 100vw;
+    background-image: url(../images/logo-white.png);
+    background-position: 1.25rem 1.875rem;
+    background-repeat: no-repeat;
+    background-size: 7.6875rem;
     transition: .8s;
+    translate: 100vw;
   }
   .header__nav-panel.is_active {
     translate: 0;
@@ -266,6 +272,36 @@ HELPER MODULE
   .header__nav-link {
     color: var(--white);
   }
+  /* ボタンの装飾を消す */
+  .header__nav-btn {
+    display: inline-block;
+    top: 0px;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    background-color: transparent;
+    border: none;
+    border-radius: none;
+    box-shadow: none;
+    transition: none;
+  }
+  .header__nav-btn.btn--before-icon {
+    padding-right: 0em;
+    padding-left: 2.25em;
+  }
+  .header__nav-btn.btn--before-icon::before {
+    left: 0;
+    font-size: 1.625rem;
+  }
+  .header__nav-btn.btn:focus,
+  .header__nav-btn.btn:hover {
+  top: 0px;
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  color: var(--white);
+}
 }
 /* ヘッダーのデスクトップ表示
 ------------------------------------------------ */
@@ -885,19 +921,20 @@ CTA
   .access__container {
     display: flex;
     justify-content: space-between;
+    gap: 10%;
     max-width: 816px;
     margin-right: auto;
     margin-left: auto;
   }
   .access__map-wrapper {
+    flex: 1 1 45%;
     margin-bottom: 0;
   }
   .access__map {
-    width: 40vh;
     height: 40vh;
   }
   .access__body {
-    flex: 0 0 43.2598%;
+    flex: 0 0 45%;
   }
   .access__logo {
     margin-bottom: 1.69rem;
@@ -1033,6 +1070,10 @@ CTA
   .contact {
     padding-top: 9.38rem;
     padding-bottom: 9.37rem;
+  }
+  .contact__inner {
+    display: grid;
+    place-items: center;
   }
   .contact__text {
     margin-bottom: 4.88rem;
