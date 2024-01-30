@@ -64,6 +64,7 @@ p {
 ------------------------------------------------ */
 .btn {
   display: inline-block;
+  top: -2px;
   max-width: 100%;
   padding-top: .62rem;
   padding-right: 3rem;
@@ -79,8 +80,10 @@ p {
 }
 .btn:focus,
 .btn:hover {
+  top: 1px;
   background-color: var(--white);
   border-color: var(--accent-color);
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.20);
   color: var(--accent-color);
 }
 /* 拡張パターン（テキストの前にアイコンを設置） */
@@ -187,10 +190,9 @@ HELPER MODULE
     top: 0;
     z-index: 99;
     width: 100%;
-    height: 90px;
-    padding-top: 1.88rem;
-    padding-bottom: 1.88rem;
-    z-index: 99;
+    height: 5.625rem;
+    padding-top: 1.875rem;
+    padding-bottom: 1.875rem;
   }
   .header__logo {
     width: 7.6875rem;
@@ -265,7 +267,7 @@ HELPER MODULE
     color: var(--white);
   }
 }
-/* ヘッダー デスクトップ表示
+/* ヘッダーのデスクトップ表示
 ------------------------------------------------ */
 @media screen and (min-width: 768px) {
   .header {
@@ -283,6 +285,9 @@ HELPER MODULE
     align-items: center;
     gap: 1.875rem;
     height: 100%;
+  }
+  .header__nav {
+    display: flex;
   }
   .header__logo {
     width: 13.8125rem;
@@ -329,8 +334,11 @@ HELPER MODULE
 .main-visual__sub-title-area {
   display: grid;
   place-items: center;
+  padding-top: 3rem;
+  padding-right: 1.25rem;
+  padding-bottom: 3rem;
+  padding-left: 1.25rem;
   width: 100%;
-  height: 9.375rem;
   background-color: var(--white);
   opacity: .8;
 }
@@ -415,6 +423,10 @@ HELPER MODULE
   .concept {
     padding-top: 6.44rem;
     padding-bottom: 9.19rem;
+    background-image: url(../images/concept-subtitle.png);
+    background-repeat: no-repeat;
+    background-position: 4.5rem 0;
+    background-size: 1.125rem;
   }
   .concept__item {
     display: flex;
@@ -455,7 +467,7 @@ HELPER MODULE
   .gallery__slider {
     display: flex;
       animation: slide-pc 50s linear infinite;
-  }  
+  }
   .gallery__image {
     width: 24.30555vw;
   }
@@ -547,12 +559,12 @@ HELPER MODULE
 CTA
 ================================================ */
 .cta-area {
-  padding-top: 3.13rem;
-  padding-bottom: 3.12rem;
+  padding-top: 3.125rem;
+  padding-bottom: 3.125rem;
   text-align: center;
 }
 .cta-area__title {
-  margin-bottom: 1.88rem;
+  margin-bottom: 1.875rem;
   text-align: center;
 }
 .cta-area__logo {
@@ -562,7 +574,7 @@ CTA
   font-size: 1.25rem;
 }
 .cta-area__text {
-  margin-bottom: 1.88rem;
+  margin-bottom: 1.875rem;
   text-align: center;
   font-size: 0.75rem;
 }
@@ -602,9 +614,9 @@ CTA
   .flow {
     display: grid;
     place-items: center;
-    padding-top: 1.88rem;
+    padding-top: 1.875rem;
     padding-right: 1.28rem;
-    padding-bottom: 1.87rem;
+    padding-bottom: 1.875rem;
     padding-left: 1.21rem;
   }
   .flow__inner {
@@ -620,7 +632,7 @@ CTA
     display: flex;
     justify-content: space-between;
     gap: 7%;
-    margin-bottom: .63rem;
+    margin-bottom: .625rem;
   }
   .flow__image-wrapper {
     flex: 0 1 54%;
@@ -641,8 +653,8 @@ CTA
   }
   /* 下向き矢印 */
   .flow__arrow-wrapper {
-    margin-top: 1.88rem;
-    margin-bottom: 1.88rem;
+    margin-top: 1.875rem;
+    margin-bottom: 1.875rem;
     width: 5rem;
   }
 }
@@ -696,7 +708,7 @@ CTA
 .voice {
   position: relative;
   padding-top: 3.12rem;
-  /* 右にスクロールできることを示すため余白はなし */
+  /* 右にスクロールできることを示すため右の余白は無し */
   padding-bottom: 3.19rem;
   padding-left: 5.3333%;
   text-align: center;
@@ -820,15 +832,15 @@ CTA
 アクセス
 ================================================ */
 .access {
-  padding-top: 3.13rem;
+  padding-top: 3.125rem;
   padding-right: 1.19rem;
-  padding-bottom: 1.87rem;
+  padding-bottom: 1.875rem;
   padding-left: 1.25rem;
   text-align: center;
 }
 .access__inner {
-  padding-top: 3.13rem;
-  padding-bottom: 3.13rem;
+  padding-top: 3.125rem;
+  padding-bottom: 3.125rem;
   border-radius: 1.5625rem;
 }
 .access__map-wrapper {
@@ -861,9 +873,9 @@ CTA
 @media screen and (min-width: 768px) {
   .access {
     padding-top: 7.5rem;
-    padding-right: 10.63rem;
+    padding-right: 10.625rem;
     padding-bottom: 7.5rem;
-    padding-left: 10.63rem;
+    padding-left: 10.625rem;
   }
   .access__inner {
     padding-top: 3.81rem;
@@ -902,7 +914,7 @@ CTA
 資料請求・お問い合わせ
 ================================================ */
 .contact {
-  padding-top: 3.13rem;
+  padding-top: 3.125rem;
   padding-bottom: 5rem;
   transform: translateY(-1px);
   font-size: 0.875rem;
@@ -996,7 +1008,7 @@ CTA
 }
 .contact__form-btn-wrapper {
   margin-top: 1.875rem;
-  margin-bottom: 3.13rem;
+  margin-bottom: 3.125rem;
 }
 /* 電話番号のエリア */
 .contact__tel-area {
@@ -1053,25 +1065,25 @@ CTA
   /* 選択式フォーム */
   .contact__form-select {
     width: 16.25rem;
-    padding: .63rem 1.25rem;
+    padding: .625rem 1.25rem;
     background-position: right 1.3125rem center;
   }
   /* テキスト入力フォーム */
   .contact__form-text {
     width: 27.875rem;
-    padding: .63rem 1.25rem;
+    padding: .625rem 1.25rem;
   }
   .contact__form-text::placeholder {
     font-size: 1rem;
   }
   /* ご相談希望日の下余白 */
   .contact__date-titel {
-    margin-bottom: 1.88rem;
+    margin-bottom: 1.875rem;
   }
   /* 希望日選択フォーム */
   .contact__form-date {
     width: 16.25rem;
-    padding: .63rem 1.25rem;
+    padding: .625rem 1.25rem;
   }
   .contact__form-textarea {
     width: 27.875rem;
@@ -1116,13 +1128,112 @@ CTA
     font-size: 1rem;
   }
 }
+
 /* ================================================
 フッター
 ================================================ */
-
-
+.footer {
+  padding-top: 3.75rem;
+}
+.footer__body {
+  max-width: 16.0625rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding-bottom: 5rem;
+}
+.footer__logo-area {
+  display: grid;
+  place-items: center;
+  margin-bottom: 1.875rem;
+}
+.footer__logo {
+  width: 10.25rem;
+  margin-bottom: 1.25rem;
+}
+.footer__number-area {
+  width: 14.0625rem;
+}
+.footer__text {
+  font-size: 0.6875rem;
+}
+/* フッターナビ */
+.footer__nav {
+  margin-bottom: 1.875rem;
+}
+.footer__nav-list {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+.footer__nav-link {
+  color: var(--text-color);
+  font-size: 0.875rem;
+  transition: .8s;
+}
+.footer__nav-link:focus,
+.footer__nav-link:hover {
+  color: var(--white);
+}
+/* ボタンのサイズ変更 */
+.footer__btn {
+  width: 100%;
+  text-align: center;
+}
+/* コピーライト */
+.footer__copyright-area {
+  display: grid;
+  place-items: center;
+  height: 3.125rem;
+}
+.footer__copyright {
+  font-size: 0.6875rem;
+}
 /* フッターのデスクトップ表示
 ------------------------------------------------ */
 @media screen and (min-width: 768px) {
-
+  .footer {
+    padding-top: 5rem;
+  }
+  .footer__body {
+    max-width: 45.375rem;
+  }
+  .footer__inner {
+    text-align: center;
+  }
+  .footer__logo-area {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4.375rem;
+  }
+  .footer__logo {
+    width: 13.8125rem;
+    margin-bottom: 0;
+  }
+  .footer__number-area {
+    width: 19.5625rem;
+  }
+  .footer__text {
+    font-size: 0.875rem;
+  }
+  /* フッターナビ */
+  .footer__nav {
+    margin-bottom: 4.375rem;
+  }
+  .footer__nav-list {
+    justify-content: space-between;
+  }
+  .footer__nav-link {
+    font-size: 1.125rem;
+  }
+  /* ボタンのサイズ変更 */
+  .footer__btn {
+    width: 22.0625rem;
+  }
+  /* コピーライト */
+  .footer__copyright-area {
+    height: 5rem;
+  }
+  .footer__copyright {
+    font-size: 0.75rem;
+  }
 }
