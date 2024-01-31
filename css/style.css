@@ -23,6 +23,7 @@ html {
 }
 body {
   background-color: var(--base-color);
+  box-sizing : border-box;
   color: var(--text-color);
   font-family: "hiragino-kaku-gothic-pron", sans-serif;
   font-weight: normal;
@@ -152,6 +153,9 @@ HELPER MODULE
 ------------------------------------------------ */
 .bg-color-main {
   background-color: var(--main-color);
+}
+.bg-color-accent {
+  background-color: var(--accent-color);
 }
 .bg-color-base {
   background-color: var(--base-color);
@@ -491,9 +495,12 @@ HELPER MODULE
 }
 /* 右から左へスライドするギャラリー
 ------------------------------------------------ */
+.gallery {
+  overflow-x: hidden;
+}
 .gallery__slider {
   display: flex;
-    animation: slide-sp 40s linear infinite;
+  animation: slide-sp 40s linear infinite;
 }
 .gallery__image {
   width: 46.6666vw;
@@ -746,7 +753,7 @@ CTA
   padding-top: 3.12rem;
   /* 右にスクロールできることを示すため右の余白は無し */
   padding-bottom: 3.19rem;
-  padding-left: 5.3333%;
+  /* padding-left: 5.3333%; */
   text-align: center;
 }
 .voice__container {
@@ -755,9 +762,12 @@ CTA
   white-space: nowrap;
 }
 .voice__item {
-  width: 296px;
+  width: 80vw;
   margin-bottom: 3.08rem;
   margin-right: 2.5rem;
+}
+.voice__item:first-child {
+  margin-left: 5.33333%;
 }
 .voice__item:last-child {
   margin-right: 5.33333%;
@@ -785,7 +795,7 @@ CTA
 }
 .voice__text {
   font-size: 0.75rem;
-  white-space: wrap;
+  white-space: normal;
 }
 .voice__btn {
   width: 50vw;
@@ -825,8 +835,7 @@ CTA
   }
   .voice__container {
     flex-direction: column;
-    overflow: visible;
-    white-space: wrap;
+    overflow-x: visible;
   }
   .voice__item {
     display: flex;
@@ -861,6 +870,7 @@ CTA
   }
   .voice__text {
     font-size: 1rem;
+    white-space: wrap;
   }
 }
 
@@ -1225,9 +1235,46 @@ CTA
   display: grid;
   place-items: center;
   height: 3.125rem;
+  padding-top: 1rem;
+  padding-bottom: 6rem;
 }
 .footer__copyright {
-  font-size: 0.6875rem;
+  font-size: 0.687rem;
+}
+/* 下部固定ボタン（スマートフォン表示のみ） */
+.footer__fixed-menu {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  transform: translateY(1px);
+}
+.footer__fixed-menu-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer__fixed-menu-item {
+  display: grid;
+  place-items: center;
+  width: 50%;
+  padding-top: 1.1875rem;
+  padding-bottom: 1.1875rem;
+}
+.footer__fixed-menu-link {
+  color: var(--white);
+  font-size: 1rem;
+}
+.footer__fixed-menu-link.btn--before-icon {
+  padding-right: 1.38em;
+  padding-left: 3.375em;
+}
+.footer__fixed-menu-link.btn--before-icon::before {
+  position: absolute;
+  top: 50%;
+  left: .812em;
+  font-family:"Material Symbols Outlined";
+  font-size: 1.625rem;
+  transform: translateY(-50%);
 }
 /* フッターのデスクトップ表示
 ------------------------------------------------ */
