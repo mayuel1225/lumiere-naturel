@@ -145,6 +145,11 @@ p {
 .wave-bottom {
   transform: translateY(-1px);
 }
+/* フェードインのための設定
+------------------------------------------------ */
+.fadein {
+  opacity: 0;
+}
 
 /* ================================================
 HELPER MODULE
@@ -176,6 +181,28 @@ HELPER MODULE
 @media screen and (min-width: 767px) {
   .sp-only {
     display: none;
+  }
+}
+
+/* ================================================
+ローディング画面
+================================================ */
+.loading {
+  display: grid;
+  place-items: center;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background-color: var(--main-color);
+}
+.loading__logo {
+  width: 12.5rem;
+}
+/* ローディング画面のデスクトップ表示
+------------------------------------------------ */
+@media screen and (min-width: 768px) {
+  .loading__logo {
+    width: 21.875rem;
   }
 }
 
@@ -751,9 +778,7 @@ CTA
 .voice {
   position: relative;
   padding-top: 3.12rem;
-  /* 右にスクロールできることを示すため右の余白は無し */
   padding-bottom: 3.19rem;
-  /* padding-left: 5.3333%; */
   text-align: center;
 }
 .voice__container {
@@ -836,6 +861,7 @@ CTA
   .voice__container {
     flex-direction: column;
     overflow-x: visible;
+    white-space: normal;
   }
   .voice__item {
     display: flex;

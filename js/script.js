@@ -14,7 +14,24 @@ const headerBtn = document.querySelector(".header__btn")
 const headerPanel = document.querySelector(".header__nav-panel")
 // メニューのリンクを取得
 const navLinks = document.querySelectorAll('.header__nav-link');
+// ローディング画面を取得
+const loadingScreen = document.getElementById('loading');
 
+
+// ローディング画面を表示して読み込み後に上に引いて非表示にする
+window.addEventListener('load', () => {
+  loadingScreen.animate(
+    {
+      translate: ['0 0', '0 -100vh']
+    },
+    {
+      duration: 2000,
+      delay: 800,
+      easing: 'ease',
+      fill: 'forwards'
+    }
+  );
+});
 
 // ヘッダーボタンをクリックするとメニューパネルが開閉する
 headerBtn.addEventListener("click", () => {
@@ -31,4 +48,33 @@ navLinks.forEach(link => {
     headerBtn.classList.remove('is_active');
     headerPanel.classList.remove('is_active');
   });
+});
+
+// fadeinクラスをつけたアイテムを下から上にふわっと表示させる
+const animateFade = (entries, obs) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.animate(
+        {
+          opacity: [0, 1],
+          filter: ["blur(.3rem)", "blur(0)"],
+          translate: ["0 3rem", 0],
+        },
+        {
+          duration: 1800,
+          easing: "ease",
+          fill: "forwards",
+        }
+      );
+      // 一度表示されたら監視をやめる
+      obs.unobserve(entry.target);
+    }
+  });
+};
+// 監視設定
+const fadeObserver =new IntersectionObserver(animateFade);
+// 監視対象
+const fadeElements =document.querySelectorAll(".fadein");
+fadeElements.forEach((fadeElement) => {
+  fadeObserver.observe(fadeElement);
 });

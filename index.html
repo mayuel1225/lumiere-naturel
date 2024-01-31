@@ -35,6 +35,12 @@
   <script src="js/script.js" type="module"></script>
 </head>
 <body>
+  <!-- ============ ローディング画面 ============ -->
+  <div id="loading" class="loading">
+    <img src="images/logo-white.png" alt="Lumiere Naturelのロゴ" class="loading__logo">
+  </div>
+  <!-- /#loading.loading -->
+
   <!-- ============ メインビジュアル ============ -->
   <div class="main-visual">
     <h1 class="main-visual__title">Garden <br class="sp-only">Wedding</h1>
@@ -95,18 +101,18 @@
     <section id="concept" class="concept">
       <div class="concept__wrapper">
         <div class="concept__inner contents-layout">
-          <h2 class="level2-heading">コンセプト</h2>
+          <h2 class="level2-heading fadein">コンセプト</h2>
           <div class="concept__item">
             <figure class="concept__image-wrapper">
-              <img src="images/concept.jpg" alt="コンセプトの写真" class="concept__image">
+              <img src="images/concept.jpg" alt="コンセプトの写真" class="concept__image fadein">
             </figure>
             <div class="concept__text-area">
               <div class="concept__title-area">
-                <h3 class="concept__title">自分たちらしさをナチュラルに。</h3>
-                <p class="concept__sub-title">― 光と緑に溢れる自然派ウエディング ―</p>
+                <h3 class="concept__title fadein">自分たちらしさをナチュラルに。</h3>
+                <p class="concept__sub-title fadein">― 光と緑に溢れる自然派ウエディング ―</p>
               </div>
               <!-- /.concept__title-area -->
-              <p class="concept__text">
+              <p class="concept__text fadein">
                 花や緑で囲まれた美しいガーデンウエディングで叶う、アットホームな結婚式を。美しい風景や季節の移ろいとともに特別な思い出として生涯残る最高の一日を演出します。<br><br>おふたりとゲストが心地よく過ごせる結婚式を私たちと一緒に創りませんか？
               </p>
             </div>
@@ -145,13 +151,13 @@
 
     <section id="commitment" class="commitment bg-color-sub">
       <div class="commitment__inner contents-layout">
-        <h2 class="level2-heading">こだわり</h2>
+        <h2 class="level2-heading fadein">こだわり</h2>
         <div class="commitment__container">
           <div class="commitment__item">
-            <figure class="commitment__image-wrapper">
+            <figure class="commitment__image-wrapper fadein">
               <img src="images/commitment1.jpg" alt="チャペルの写真" class="commitment__image">
             </figure>
-            <div class="commitment__text-area">
+            <div class="commitment__text-area fadein">
               <h3 class="commitment__title">美しい自然と光が溢れるチャペル</h3>
               <p class="commitment__text">
                 季節によって様々に表情を変えるチャペルは同じ光景がなく、おふたりだけの特別な1日に。
@@ -161,10 +167,10 @@
           </div>
           <!-- /.commitment__item -->
           <div class="commitment__item commitment__item--row-reverse">
-            <figure class="commitment__image-wrapper">
+            <figure class="commitment__image-wrapper fadein">
               <img src="images/commitment2.jpg" alt="友人たちとブーケトスをしている写真" class="commitment__image">
             </figure>
-            <div class="commitment__text-area">
+            <div class="commitment__text-area fadein">
               <h3 class="commitment__title">1日1組限定</h3>
               <p class="commitment__text">
                 貸切なので時間にとらわれることなく、ゲストとゆっくりと特別な日を楽しむことができます。
@@ -174,10 +180,10 @@
           </div>
           <!-- /.commitment__item -->
           <div class="commitment__item">
-            <figure class="commitment__image-wrapper">
+            <figure class="commitment__image-wrapper fadein">
               <img src="images/commitment3.jpg" alt="結婚式場のテーブルの写真" class="commitment__image">
             </figure>
-            <div class="commitment__text-area">
+            <div class="commitment__text-area fadein">
               <h3 class="commitment__title">理想を叶えるご提案</h3>
               <p class="commitment__text">
                 プランナーがおふたりの好みやこだわりをお伺いし、お花や飾りつけ、お料理などをご提案します。
@@ -187,10 +193,10 @@
           </div>
           <!-- /.commitment__item -->
           <div class="commitment__item commitment__item--row-reverse">
-            <figure class="commitment__image-wrapper">
+            <figure class="commitment__image-wrapper fadein">
               <img src="images/commitment4.jpg" alt="飾り付けられたウェルカムボードの写真" class="commitment__image">
             </figure>
-            <div class="commitment__text-area">
+            <div class="commitment__text-area fadein">
               <h3 class="commitment__title">おふたりだけのデザイン</h3>
               <p class="commitment__text">
                 招待状やウェルカムボードなどのウェディングアイテムはデザイナーがイチからご希望に合わせてお作りします。
@@ -200,10 +206,10 @@
           </div>
           <!-- /.commitment__item -->
           <div class="commitment__item">
-            <figure class="commitment__image-wrapper">
+            <figure class="commitment__image-wrapper fadein">
               <img src="images/commitment5.jpg" alt="ブーケを持った花嫁の写真" class="commitment__image">
             </figure>
-            <div class="commitment__text-area">
+            <div class="commitment__text-area fadein">
               <h3 class="commitment__title">ヘア＆ブーケ</h3>
               <p class="commitment__text">
                 ドレスやガーデンの雰囲気に合わせたヘアスタイルとブーケをコーディネイトします。
@@ -243,10 +249,10 @@
 
     <section id="flow" class="flow bg-color-main">
       <div class="flow__inner contents-layout bg-color-base">
-        <h2 class="level2-heading">結婚式までの流れ</h2>
+        <h2 class="level2-heading fadein">結婚式までの流れ</h2>
 
         <!-- スマートフォン表示のレイアウト -->
-        <div class="flow__item sp-only">
+        <div class="flow__item sp-only fadein">
           <div class="flow__container">
             <figure class="flow__image-wrapper">
               <img src="images/flow1.jpg" alt="ブライダルプランナーがヒアリングしている写真" class="flow__image">
@@ -267,7 +273,7 @@
         </div>
         <!-- /.flow__item -->
         <!-- デスクトップ表示のレイアウト -->
-        <div class="flow__item pc-only">
+        <div class="flow__item pc-only fadein">
           <div class="flow__container">
             <figure class="flow__image-wrapper">
               <img src="images/flow1.jpg" alt="ブライダルプランナーがヒアリングしている写真" class="flow__image">
@@ -294,7 +300,7 @@
         <!-- /.flow__arrow-wrapper -->
 
         <!-- スマートフォン表示のレイアウト -->
-        <div class="flow__item sp-only">
+        <div class="flow__item sp-only fadein">
           <div class="flow__container">
             <figure class="flow__image-wrapper">
               <img src="images/flow2.jpg" alt="女性がブライダルプランナーと話している写真" class="flow__image">
@@ -315,7 +321,7 @@
         </div>
         <!-- /.flow__item -->
         <!-- デスクトップ表示のレイアウト -->
-        <div class="flow__item pc-only">
+        <div class="flow__item pc-only fadein">
           <div class="flow__container">
             <figure class="flow__image-wrapper">
               <img src="images/flow2.jpg" alt="女性がブライダルプランナーと話している写真" class="flow__image">
@@ -342,7 +348,7 @@
         <!-- /.flow__arrow-wrapper -->
 
         <!-- スマートフォン表示のレイアウト -->
-        <div class="flow__item sp-only">
+        <div class="flow__item sp-only fadein">
           <div class="flow__container">
             <figure class="flow__image-wrapper">
               <img src="images/flow3.jpg" alt="ブライダルプランナーが花婿と花嫁を誘導している写真" class="flow__image">
@@ -363,7 +369,7 @@
         </div>
         <!-- /.flow__item -->
         <!-- デスクトップ表示のレイアウト -->
-        <div class="flow__item pc-only">
+        <div class="flow__item pc-only fadein">
           <div class="flow__container">
             <figure class="flow__image-wrapper">
               <img src="images/flow3.jpg" alt="ブライダルプランナーが花婿と花嫁を誘導している写真" class="flow__image">
@@ -393,9 +399,9 @@
 
     <!-- ============ お客様の声 ============ -->
     <section id="voice" class="voice">
-      <h2 class="level2-heading">お客様の声</h2>
+      <h2 class="level2-heading fadein">お客様の声</h2>
       <div class="voice__container">
-        <div class="voice__item">
+        <div class="voice__item fadein">
           <figure class="voice__image-wrapper">
             <img src="images/voice1.jpg" alt="新木さんご夫妻の写真" class="voice__image">
             <figcaption class="voice__name">新木さんご夫婦</figcaption>
@@ -413,7 +419,7 @@
           <!-- /.voice__text-area -->
         </div>
         <!-- /.voice__item -->
-        <div class="voice__item voice__item--row-reverse">
+        <div class="voice__item voice__item--row-reverse fadein">
           <figure class="voice__image-wrapper">
             <img src="images/voice2.jpg" alt="鈴原さんご夫婦の写真" class="voice__image">
             <figcaption class="voice__name">鈴原さんご夫婦</figcaption>
@@ -431,7 +437,7 @@
           <!-- /.voice__text-area -->
         </div>
         <!-- /.voice__item -->
-        <div class="voice__item">
+        <div class="voice__item fadein">
           <figure class="voice__image-wrapper">
             <img src="images/voice3.jpg" alt="前園さんご夫婦の写真" class="voice__image">
             <figcaption class="voice__name">前園さんご夫婦</figcaption>
@@ -466,8 +472,8 @@
 
     <section id="access" class="access bg-color-sub">
       <div class="access__inner contents-layout bg-color-white">
-        <h2 class="level2-heading">アクセス</h2>
-        <div class="access__container">
+        <h2 class="level2-heading fadein">アクセス</h2>
+        <div class="access__container fadein">
           <div class="access__map-wrapper">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.8280306898537!2d139.7645498764484!3d35.68123617258723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bfbd89f700b%3A0x277c49ba34ed38!2z5p2x5Lqs6aeF!5e0!3m2!1sja!2sjp!4v1706222853330!5m2!1sja!2sjp" width="auto" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="access__map"></iframe>
           </div>
@@ -493,7 +499,7 @@
 
     <!-- ============ 資料請求・お問い合わせ ============ -->
     <section id="contact" class="contact bg-color-white">
-      <div class="contact__inner contents-layout">
+      <div class="contact__inner contents-layout fadein">
         <div class="contact__title-area">
           <h2 class="level2-heading">資料請求・お問い合わせ</h2>
           <p class="contact__text">
