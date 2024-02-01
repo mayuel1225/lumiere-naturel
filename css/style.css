@@ -171,13 +171,15 @@ HELPER MODULE
 .bg-color-white {
   background-color: var(--white);
 }
-/* スマートフォン版・デスクトップ版のみ表示する
+/* スマートフォン表示のときは非表示にする
 ------------------------------------------------ */
 @media screen and (max-width: 768px) {
   .pc-only {
     display: none;
   }
 }
+/* デスクトップ表示のときは非表示にする
+------------------------------------------------ */
 @media screen and (min-width: 767px) {
   .sp-only {
     display: none;
@@ -500,12 +502,15 @@ HELPER MODULE
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
-    gap: 10%;
+    gap: 6%;
     margin-bottom: 9.37rem;
   }
   .concept__image-wrapper {
-    width: 100%;
+    flex: 1 0 49%;
     margin-bottom: 0;
+  }
+  .concept__text-area {
+    flex: 0 1 45%;
   }
   .concept__title {
     margin-bottom: 3.75rem;
@@ -517,7 +522,7 @@ HELPER MODULE
   }
   .concept__text {
     font-size: 1rem;
-    line-height: 2.5; /* 1.875rem */
+    line-height: 2.5;
   }
 }
 /* 右から左へスライドするギャラリー
@@ -598,7 +603,7 @@ HELPER MODULE
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 8vw;
+    gap: 6%;
     margin-bottom: 12.5rem;
   }
   .commitment__item:last-child {
@@ -608,12 +613,11 @@ HELPER MODULE
     flex-direction: row-reverse;
   }
   .commitment__image-wrapper {
-    flex: 1 0 49%;
-    width: 37.5vw;
+    flex: 1 1 49%;
     margin-bottom: 0;
   }
   .commitment__text-area {
-    flex: 1 0 40.5%;
+    flex: 0 0 45%;
   }
   .commitment__title {
     padding-bottom: 0.625rem;
@@ -783,19 +787,11 @@ CTA
 }
 .voice__container {
   display: flex;
-  overflow-x: scroll;
-  white-space: nowrap;
+  gap: 2.5rem;
 }
 .voice__item {
-  width: 80vw;
+  width: min(296px, 78.9333vw);
   margin-bottom: 3.08rem;
-  margin-right: 2.5rem;
-}
-.voice__item:first-child {
-  margin-left: 5.33333%;
-}
-.voice__item:last-child {
-  margin-right: 5.33333%;
 }
 .voice__image-wrapper {
   margin-bottom: .75rem;
@@ -826,7 +822,24 @@ CTA
   width: 50vw;
   max-width: 20.9375rem;
 }
+/* お客様の声のスマートフォン表示にのみ適用
+------------------------------------------------ */
 @media screen and (max-width: 767px) {
+  /* 横スクロール可能にする */
+  .voice__scroll-wrapper {
+    overflow-x: scroll;
+  }
+  .voice__container {
+    width: 1000px;
+    white-space: nowrap;
+  }
+  /* 左右の余白 */
+  .voice__item:first-child {
+    margin-left: 5.33333vw;
+  }
+  .voice__item:last-child {
+    margin-right: 5.33333vw;
+  }
   /* スクロールアイコン */
   .voice__scroll {
     display: grid;
@@ -861,7 +874,6 @@ CTA
   .voice__container {
     flex-direction: column;
     overflow-x: visible;
-    white-space: normal;
   }
   .voice__item {
     display: flex;
@@ -1260,7 +1272,6 @@ CTA
 .footer__copyright-area {
   display: grid;
   place-items: center;
-  height: 3.125rem;
   padding-top: 1rem;
   padding-bottom: 6rem;
 }
@@ -1345,7 +1356,8 @@ CTA
   }
   /* コピーライト */
   .footer__copyright-area {
-    height: 5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
   .footer__copyright {
     font-size: 0.75rem;
