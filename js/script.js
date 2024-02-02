@@ -53,22 +53,28 @@ navLinks.forEach(link => {
 // fadeinクラスをつけたアイテムを下から上にふわっと表示させる
 const animateFade = (entries, obs) => {
   entries.forEach((entry) => {
+    // スマートフォン表示で特定のクラスを持つ要素はアニメーションを実行しない
     if (entry.isIntersecting) {
-      entry.target.animate(
-        {
-          opacity: [0, 1],
-          filter: ["blur(.3rem)", "blur(0)"],
-          translate: ["0 3rem", 0],
-        },
-        {
-          duration: 1800,
-          easing: "ease",
-          fill: "forwards",
+      if (window.innerWidth <= 768 && entry.target.classList.contains('no-fade-sp')) {
+        entry.target.style.opacity = 1;
+        obs.unobserve(entry.target);
+      } else {
+        entry.target.animate(
+          {
+            opacity: [0, 1],
+            filter: ["blur(.3rem)", "blur(0)"],
+            translate: ["0 3rem", 0],
+          },
+          {
+            duration: 1800,
+            easing: "ease",
+            fill: "forwards",
+          }
+          );
+          // 一度表示されたら監視をやめる
+          obs.unobserve(entry.target);
         }
-      );
-      // 一度表示されたら監視をやめる
-      obs.unobserve(entry.target);
-    }
+      }
   });
 };
 // 監視設定

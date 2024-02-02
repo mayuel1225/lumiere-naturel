@@ -150,6 +150,9 @@ p {
 .fadein {
   opacity: 0;
 }
+.no-fade-sp {
+  opacity: 1;
+}
 
 /* ================================================
 HELPER MODULE
