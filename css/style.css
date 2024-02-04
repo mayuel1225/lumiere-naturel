@@ -153,10 +153,6 @@ p {
 .no-fade-sp {
   opacity: 1;
 }
-
-/* ================================================
-HELPER MODULE
-================================================ */
 /*	背景色
 ------------------------------------------------ */
 .bg-color-main {
@@ -218,9 +214,9 @@ HELPER MODULE
   padding-right: 1.25rem;
   padding-left: 1.25rem;
 }
-/* スマートフォン版のみ設定（スライドメニュー）
+/* スマートフォン〜タブレットのみスライドメニューにする
 ------------------------------------------------ */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1024px) {
   .header {
     position: fixed;
     top: 0;
@@ -332,16 +328,16 @@ HELPER MODULE
   }
   .header__nav-btn.btn:focus,
   .header__nav-btn.btn:hover {
-  top: 0px;
-  background-color: transparent;
-  border-color: transparent;
-  box-shadow: none;
-  color: var(--white);
-}
+    top: 0px;
+    background-color: transparent;
+    border-color: transparent;
+    box-shadow: none;
+    color: var(--white);
+  }
 }
 /* ヘッダーのデスクトップ表示
 ------------------------------------------------ */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1025px) {
   .header {
     position: sticky;
     top: 0;
@@ -391,6 +387,7 @@ HELPER MODULE
   height: 100vh;
   background-image: url(../images/main-visual_sp.jpg);
   background-size: cover;
+  background-position: top center;
 }
 .main-visual__title {
   padding-top: 30vh;
@@ -489,16 +486,12 @@ HELPER MODULE
   font-size: 0.75rem;
   line-height: 2.5; /* 1.875rem */
 }
-/* コンセプトのデスクトップ表示
+/* コンセプトのタブレット〜デスクトップ表示
 ------------------------------------------------ */
 @media screen and (min-width: 768px) {
   .concept {
     padding-top: 6.44rem;
     padding-bottom: 9.19rem;
-    background-image: url(../images/concept-subtitle.png);
-    background-repeat: no-repeat;
-    background-position: 4.5rem 0;
-    background-size: 1.125rem;
   }
   .concept__item {
     display: flex;
@@ -516,16 +509,33 @@ HELPER MODULE
     flex: 0 1 45%;
   }
   .concept__title {
-    margin-bottom: 3.75rem;
+    margin-bottom: .875rem;
     font-size: 1.625rem;
     letter-spacing: 0.24375rem;
   }
   .concept__sub-title {
-    display: none;
+    margin-bottom: 2rem;
+    font-size: 1.125rem;
   }
   .concept__text {
     font-size: 1rem;
     line-height: 2.5;
+  }
+}
+/* コンセプトのデスクトップ表示のみ適用
+------------------------------------------------ */
+@media screen and (min-width: 1025px) {
+  .concept {
+    background-image: url(../images/concept-subtitle.png);
+    background-repeat: no-repeat;
+    background-position: 4.5rem 0;
+    background-size: 1.125rem;
+  }
+  .concept__title {
+    margin-bottom: 3.75rem;
+  }
+  .concept__sub-title {
+    display: none;
   }
 }
 /* 右から左へスライドするギャラリー
@@ -685,6 +695,10 @@ CTA
 /* ================================================
 結婚式までの流れ
 ================================================ */
+.flow {
+  padding-right: 1.25rem;
+  padding-left: 1.25rem;
+}
 /* スマートフォンでの表示
 ------------------------------------------------ */
 @media screen and (max-width: 767px) {
@@ -692,9 +706,7 @@ CTA
     display: grid;
     place-items: center;
     padding-top: 1.875rem;
-    padding-right: 1.28rem;
     padding-bottom: 1.875rem;
-    padding-left: 1.21rem;
   }
   .flow__inner {
     display: grid;
@@ -877,6 +889,8 @@ CTA
   .voice__container {
     flex-direction: column;
     overflow-x: visible;
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
   }
   .voice__item {
     display: flex;
@@ -955,20 +969,9 @@ CTA
   font-size: 0.875rem;
   text-align: center;
 }
-/* アクセスのデスクトップ表示
+/* アクセスのタブレット〜デスクトップ表示
 ------------------------------------------------ */
 @media screen and (min-width: 768px) {
-  .access {
-    padding-top: 7.5rem;
-    padding-right: 10.625rem;
-    padding-bottom: 7.5rem;
-    padding-left: 10.625rem;
-  }
-  .access__inner {
-    padding-top: 3.81rem;
-    padding-bottom: 7.5rem;
-    border-radius: 3.125rem;
-  }
   .access__container {
     display: flex;
     justify-content: space-between;
@@ -995,6 +998,21 @@ CTA
     margin-bottom: 1.69rem;
     font-size: 0.875rem;
     line-height: 1.6;
+  }
+}
+/* アクセスのデスクトップ表示のみ適用
+------------------------------------------------ */
+@media screen and (min-width: 1025px) {
+  .access {
+    padding-top: 7.5rem;
+    padding-right: 10.625rem;
+    padding-bottom: 7.5rem;
+    padding-left: 10.625rem;
+  }
+  .access__inner {
+    padding-top: 3.81rem;
+    padding-bottom: 7.5rem;
+    border-radius: 3.125rem;
   }
 }
 
