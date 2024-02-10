@@ -374,7 +374,7 @@ p {
   }
   .header__nav-link:focus,
   .header__nav-link:hover {
-  color: var(--text-color);
+  color: var(--accent-color);
   }
 }
 
